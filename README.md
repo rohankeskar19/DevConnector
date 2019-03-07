@@ -5,7 +5,7 @@ A MERN social media app for developers
 * Add this to that file
 * module.exports = {
     "mongoDBURI" : "YOUR_MONGO_DB_URL",
-    "secretOrKey" : "YOUR_SECRET",
+    "secretOrKey" : "YOUR_SECRET"
  };
 
 # Steps
