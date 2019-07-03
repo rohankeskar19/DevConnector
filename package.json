@@ -9,7 +9,9 @@
     "start": "node server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild" : "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Rohan Keskar",
   "license": "MIT",
@@ -22,10 +24,12 @@
     "mongoose": "^5.4.3",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "validator": "^10.10.0"
+    "validator": "^10.10.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.9"
-  }
+  },
+  "snyk": true
 }
